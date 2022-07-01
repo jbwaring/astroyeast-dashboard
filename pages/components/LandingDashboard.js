@@ -17,6 +17,7 @@ import React, { useEffect, useState } from "react";
 import "@carbon/styles/css/styles.css";
 import "@carbon/charts/styles.css";
 import { Switcher, Notification, UserAvatar, Information } from "@carbon/react/icons";
+const axios = require('axios');
 const LandingDashboard = () => {
   const [graphState, setGraphState] = useState({
     data: [
@@ -135,6 +136,23 @@ const LandingDashboard = () => {
       >
         Hey
       </Button>
+      <br/>
+      <br/>
+      <br/>
+      <Button onClick={()=> {
+        
+
+        axios
+          .get('http://192.168.1.242:8000/')
+          .then(res => {
+            console.log(`statusCode: ${res.status}`);
+            console.log(res);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+        
+      }}>Demo LED</Button>
     </>
   );
 };
