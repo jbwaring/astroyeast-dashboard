@@ -1,0 +1,14 @@
+// @use "../pages/components/UIShellHeader.scss";
+@use "@carbon/react";
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/theme" as *;
+.cds--content {
+  margin-top: 3rem;
+}
+
+
+.my-background {
+    background-color: $layer-01;
+}
